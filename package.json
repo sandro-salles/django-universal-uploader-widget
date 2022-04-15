@@ -2,7 +2,7 @@
   "name": "django-universal-uploader-widget",
   "version": "0.1.6",
   "main": "index.js",
-  "repository": "https://github.com/EduardoJM/django-image-uploader-widget.git",
+  "repository": "https://github.com/sandro-salles/django-universal-uploader-widget",
   "author": "Sandro Salles <sandro@snippet.com.br>",
   "license": "MIT",
   "scripts": {

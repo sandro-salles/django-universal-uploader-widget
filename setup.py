@@ -14,7 +14,7 @@ setup(
     long_description_content_type='text/markdown',
     author='Sandro Salles',
     author_email='sandro@snippet.com.br',
-    url='https://github.com/inventare/django-universal-uploader-widget',
+    url='https://github.com/sandro-salles/django-universal-uploader-widget',
     license='MIT',
     packages=find_packages(
         exclude=("universal_uploader_widget_demo.*",
