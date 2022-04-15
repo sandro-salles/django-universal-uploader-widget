@@ -3,13 +3,13 @@
 
 @include cssvars((
     modal-overlay: rgba(0, 0, 0, 0.6),
-    modal-image-background: #FFF,
+    modal-file-background: #FFF,
     modal-closebutton-background: #FFF,
     modal-closebutton-shadow: rgba(0, 0, 0, 0.2), 
     modal-closebutton-color: #333,
 ));
 
-#iuw-modal-element {
+#uuw-modal-element {
     /* position */
     position: fixed;
     z-index: 150;
@@ -21,7 +21,7 @@
     height: 100vh;
 
     /* styles */
-    background: var(--iuw-modal-overlay);
+    background: var(--uuw-modal-overlay);
 
     /* behaviour */
     user-select: none;
@@ -41,14 +41,14 @@
         opacity: 0;
     }
 
-    .iuw-modal-image-preview {
+    .uuw-modal-file-preview {
         width: 90%;
         height: 80%;
 
         position: relative;
 
         img {
-            background: var(--iuw-modal-image-background);
+            background: var(--uuw-modal-file-background);
 
             width: 100%;
             height: 100%;
@@ -59,7 +59,7 @@
             cursor: default;
         }
 
-        .iuw-modal-close {
+        .uuw-modal-close {
             position: absolute;
             right: 0;
             top: 0;
@@ -73,13 +73,13 @@
             align-items: center;
             justify-content: center;
             
-            background: var(--iuw-modal-closebutton-background);
-            filter: drop-shadow(0 0 5px var(--iuw-modal-closebutton-shadow));
+            background: var(--uuw-modal-closebutton-background);
+            filter: drop-shadow(0 0 5px var(--uuw-modal-closebutton-shadow));
 
             svg {
                 width: 18px;
                 height: auto;
-                fill: var(--iuw-modal-closebutton-color);
+                fill: var(--uuw-modal-closebutton-color);
             }
 
             @media (max-width: 768px) {

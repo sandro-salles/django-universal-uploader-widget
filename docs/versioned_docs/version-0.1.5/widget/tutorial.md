@@ -87,7 +87,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'image_uploader_widget',
+    'universal_uploader_widget',
 ]
 
 # ...
@@ -144,7 +144,7 @@ And, here, we can declare the widget that our `image` field uses:
 # ecommerce/forms.py
 from django.forms import ModelForm
 from ecommerce.models import Product
-from image_uploader_widget.widgets import ImageUploaderWidget
+from universal_uploader_widget.widgets import ImageUploaderWidget
 
 class ProductForm(ModelForm):
     class Meta:
@@ -170,7 +170,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'image_uploader_widget',
+    'universal_uploader_widget',
     'ecommerce',
 ]
 
@@ -262,7 +262,7 @@ It's very like the above item and we need only to change some things in the `for
 ```python
 from django import forms
 from ecommerce.models import Product
-from image_uploader_widget.widgets import ImageUploaderWidget
+from universal_uploader_widget.widgets import ImageUploaderWidget
 
 class ProductForm(forms.Form):
     image = forms.ImageField(widget=ImageUploaderWidget())

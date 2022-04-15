@@ -10,7 +10,7 @@ A beautiful image uploader widget for django/django-admin.
 
 ## Documentation
 
-To understand this package and how to use it you can access the package [documentation](https://iuw.institutoinventare.com.br/).
+To understand this package and how to use it you can access the package [documentation](https://uuw.institutoinventare.com.br/).
 
 ## Installing
 
@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.forms',
-    'image_uploader_widget',
+    'universal_uploader_widget',
 ]
 ```
 
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 ```python
 # forms.py
 from django import forms
-from image_uploader_widget.widgets import ImageUploaderWidget
+from universal_uploader_widget.widgets import ImageUploaderWidget
 
 class ExampleForm(forms.ModelForm):
     class Meta:

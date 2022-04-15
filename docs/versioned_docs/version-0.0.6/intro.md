@@ -28,7 +28,7 @@ pip install django-image-uploader-widget
 
 ### 2. Add this to the INSTALLED_APPS:
 
-Go to your `settings.py` and add `image_uploader_widget` to installed apps, then they like this:
+Go to your `settings.py` and add `universal_uploader_widget` to installed apps, then they like this:
 
 ```python
 INSTALLED_APPS = [
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.forms',
-    'image_uploader_widget',
+    'universal_uploader_widget',
 ]
 ```
 
@@ -66,7 +66,7 @@ class ExampleModel(models.Model):
 
 ```python
 from django import forms
-from image_uploader_widget.widgets import ImageUploaderWidget
+from universal_uploader_widget.widgets import ImageUploaderWidget
 
 class ExampleForm(forms.ModelForm):
 
@@ -121,7 +121,7 @@ class ExampleModelImage(models.Model):
 
 ```python
 from django.contrib import admin
-from image_uploader_widget.admin import ImageUploaderInline
+from universal_uploader_widget.admin import ImageUploaderInline
 
 from . import models
 from . import forms

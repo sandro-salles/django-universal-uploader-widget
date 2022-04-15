@@ -67,14 +67,14 @@ export class EditorImage {
 
         if (related?.getAttribute('data-candelete') === 'true') {
             delete_icon = document.createElement('span');
-            delete_icon.classList.add('iuw-delete-icon');
+            delete_icon.classList.add('uuw-delete-icon');
             delete_icon.innerHTML = DeleteIcon;
         }
         if (this.canPreview) {
             const span = document.createElement('span');
-            span.classList.add('iuw-preview-icon');
+            span.classList.add('uuw-preview-icon');
             if (related?.getAttribute('data-candelete') !== 'true') {
-                span.classList.add('iuw-only-preview');
+                span.classList.add('uuw-only-preview');
             }
             span.innerHTML = PreviewIcon;
             this.element.appendChild(span);
@@ -93,11 +93,11 @@ export class EditorImage {
         }
         const target = e.target as HTMLElement;
         const item = target.closest('.inline-related');
-        if (target.closest('.iuw-delete-icon') && !!this.onDelete) {
+        if (target.closest('.uuw-delete-icon') && !!this.onDelete) {
             this.onDelete(this);
             return;
         }
-        if (target.closest('.iuw-preview-icon')) {
+        if (target.closest('.uuw-preview-icon')) {
             let image = item?.querySelector('img');
             if (image) {
                 image = image.cloneNode(true) as HTMLImageElement;

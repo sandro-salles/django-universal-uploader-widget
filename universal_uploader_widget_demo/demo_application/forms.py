@@ -1,6 +1,6 @@
 from django import forms
 
-from image_uploader_widget.widgets import ImageUploaderWidget
+from universal_uploader_widget.widgets import ImageUploaderWidget
 
 class ExampleForm(forms.ModelForm):
 

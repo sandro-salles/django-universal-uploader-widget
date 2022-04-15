@@ -4,12 +4,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = (env) => ({
     entry: {
         widget: [
-            './src/ImageUploaderWidget.ts',
-            './src/ImageUploaderWidget.scss',
+            './src/UniversalUploaderWidget.ts',
+            './src/UniversalUploaderWidget.scss',
         ],
         inline: [
-            './src/ImageUploaderInline.ts',
-            './src/ImageUploaderInline.scss',
+            './src/UniversalUploaderInline.ts',
+            './src/UniversalUploaderInline.scss',
         ],
     },
     mode: env.production ? "production" : "development",
@@ -34,12 +34,12 @@ module.exports = (env) => ({
         extensions: ['.tsx', '.ts', '.js', '.scss'],
     },
     output: {
-        filename: env.production ? 'image-uploader-[name].min.js' : 'image-uploader-[name].js',
-        path: path.resolve(__dirname, 'image_uploader_widget', 'static', 'admin', 'js'),
+        filename: env.production ? 'universal-uploader-[name].min.js' : 'universal-uploader-[name].js',
+        path: path.resolve(__dirname, 'universal_uploader_widget', 'static', 'admin', 'js'),
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `../css/image-uploader-[name]${env.production ? '.min' : ''}.css`,
+            filename: `../css/universal-uploader-[name]${env.production ? '.min' : ''}.css`,
         }),
     ],    
 });

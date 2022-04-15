@@ -47,9 +47,9 @@
     padding: 5px;
 
     /* styles */
-    background-color: var(--iuw-background);
-    border: 3px dashed var(--iuw-border-color);
-    color: var(--iuw-color);
+    background-color: var(--uuw-background);
+    border: 3px dashed var(--uuw-border-color);
+    color: var(--uuw-color);
     
     /* positioning */
     position: relative;
@@ -84,7 +84,7 @@
     font-size: 1.3em;
     font-weight: bold;
     letter-spacing: 0.05em;
-    color: var(--iuw-placeholder-text-color);
+    color: var(--uuw-placeholder-text-color);
 
     /* behaviour */
     cursor: pointer;
@@ -115,7 +115,7 @@
         text-align: center;
 
         span {
-            color: var(--iuw-placeholder-destak-color);
+            color: var(--uuw-placeholder-destak-color);
         }
     }
 }
@@ -130,7 +130,7 @@
     z-index: 55;
 
     /* style */
-    background: var(--iuw-dropzone-background);
+    background: var(--uuw-dropzone-background);
 
     /* display */
     @include flex-column-center-center();
@@ -140,7 +140,7 @@
     font-size: 1.3em;
     font-weight: bold;
     letter-spacing: 0.05em;
-    color: var(--iuw-placeholder-text-color);
+    color: var(--uuw-placeholder-text-color);
 
     /* behaviour */
     cursor: grabbing;
@@ -172,15 +172,15 @@
         text-align: center;
 
         span {
-            color: var(--iuw-placeholder-destak-color);
+            color: var(--uuw-placeholder-destak-color);
         }
     }
 }
 
-@mixin make-image-preview {
+@mixin make-file-preview {
     /* style */
-    border: 1px solid var(--iuw-image-preview-border);
-    box-shadow: 0 0 4px 0 var(--iuw-image-preview-shadow);
+    border: 1px solid var(--uuw-file-preview-border);
+    box-shadow: 0 0 4px 0 var(--uuw-file-preview-shadow);
 
     /* shape */
     width: 160px;
@@ -205,8 +205,8 @@
         object-position: center;
     }
 
-    .iuw-delete-icon,
-    .iuw-preview-icon {
+    .uuw-delete-icon,
+    .uuw-preview-icon {
         /* shape */
         width: 32px;
         height: 32px;
@@ -248,7 +248,7 @@
         }
     }
 
-    .iuw-preview-icon:not(.iuw-only-preview) {
+    .uuw-preview-icon:not(.uuw-only-preview) {
         top: 32px;
         border-radius: 0;
     }
@@ -264,7 +264,7 @@
 /*****/
 /*****/
 /*****/
-@mixin cssvars($css_variables, $prefix: iuw) {
+@mixin cssvars($css_variables, $prefix: uuw) {
     :root {
         @each $name, $value in $css_variables {
             --#{$prefix}-#{$name}: #{$value};

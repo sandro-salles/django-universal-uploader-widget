@@ -7,17 +7,18 @@ readme = f.read()
 f.close()
 
 setup(
-    name='django-image-uploader-widget',
+    name='django-universal-uploader-widget',
     version='0.1.6',
-    description='Simple Image Uploader Widget for Django-Admin',
+    description='Simple Universal Uploader Widget for Django-Admin',
     long_description=readme,
     long_description_content_type='text/markdown',
-    author='Eduardo Oliveira',
-    author_email='eduardo_y05@outlook.com',
-    url='https://github.com/inventare/django-image-uploader-widget',
+    author='Sandro Salles',
+    author_email='sandro@snippet.com.br',
+    url='https://github.com/inventare/django-universal-uploader-widget',
     license='MIT',
     packages=find_packages(
-        exclude = ("image_uploader_widget_demo.*", "image_uploader_widget_demo", )
+        exclude=("universal_uploader_widget_demo.*",
+                 "universal_uploader_widget_demo", )
     ),
     include_package_data=True,
     zip_safe=False,
@@ -34,5 +35,5 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    keywords='django,admin,widget,image,uploader',
+    keywords='django,admin,widget,universal,uploader',
 )

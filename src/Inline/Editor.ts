@@ -66,7 +66,7 @@ export class ImageUploaderInline {
 
     bindEvents() {
         this.addImageButton.addEventListener('click', this.handleAddImage);
-        this.element.querySelector('.iuw-empty')?.addEventListener('click', this.handleAddImage);
+        this.element.querySelector('.uuw-empty')?.addEventListener('click', this.handleAddImage);
     }
 
     updateEmpty() {
@@ -198,7 +198,7 @@ export class ImageUploaderInline {
     }
     
     handleDragLeave = (e: DragEvent) => {
-        if (e.relatedTarget && (e.relatedTarget as HTMLElement).closest('.iuw-inline-root') === this.element) {
+        if (e.relatedTarget && (e.relatedTarget as HTMLElement).closest('.uuw-inline-root') === this.element) {
             return;
         }
         this.element.classList.remove('drop-zone');

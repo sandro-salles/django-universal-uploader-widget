@@ -1,3 +1,3 @@
-@function cssvar($name, $prefix: iuw) {
+@function cssvar($name, $prefix: uuw) {
     @return var(--#{$prefix}-#{$name});
 }

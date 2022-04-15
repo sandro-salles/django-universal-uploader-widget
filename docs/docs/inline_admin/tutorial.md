@@ -83,7 +83,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'image_uploader_widget',
+    'universal_uploader_widget',
 ]
 
 # ...
@@ -145,7 +145,7 @@ And, now, we can define our inline widget:
 # ecommerce/admin.py
 from django.contrib import admin
 from ecommerce.models import Product, ProductImage
-from image_uploader_widget.admin import ImageUploaderInline
+from universal_uploader_widget.admin import ImageUploaderInline
 
 class ProductImageAdmin(ImageUploaderInline):
     model = ProductImage

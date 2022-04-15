@@ -44,8 +44,8 @@ INSTALLED_APPS = (
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "image_uploader_widget",
-    "image_uploader_widget_demo.demo_application",
+    "universal_uploader_widget",
+    "universal_uploader_widget_demo.demo_application",
 )
 
 MIDDLEWARE = [
@@ -58,9 +58,9 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "image_uploader_widget_demo.urls"
+ROOT_URLCONF = "universal_uploader_widget_demo.urls"
 
-WSGI_APPLICATION = "image_uploader_widget_demo.wsgi.application"
+WSGI_APPLICATION = "universal_uploader_widget_demo.wsgi.application"
 
 
 # Database

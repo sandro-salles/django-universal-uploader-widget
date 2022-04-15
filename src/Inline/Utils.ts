@@ -69,7 +69,7 @@ export function getManagementInputs(prefix: string): ImageUploaderInlineManageme
 }
 
 export function getAddButton(element: HTMLElement): HTMLElement {
-    const addImageButton = element.querySelector<HTMLElement>('.iuw-add-image-btn');
+    const addImageButton = element.querySelector<HTMLElement>('.uuw-add-image-btn');
     if (!addImageButton) {
         throw new Error('no-add-button-found');
     }

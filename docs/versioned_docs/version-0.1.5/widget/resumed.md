@@ -10,7 +10,7 @@ If you want to read a more complete description of how to use this widget, see t
 pip install django-image-uploader-widget
 ```
 
-and add the `image_uploader_widget` to the `INSTALLED_APPS` in the `settings.py`:
+and add the `universal_uploader_widget` to the `INSTALLED_APPS` in the `settings.py`:
 
 ```python
 # ...
@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'image_uploader_widget',
+    'universal_uploader_widget',
 ]
 
 # ...
@@ -34,7 +34,7 @@ And go to use it with your forms:
 ```python
 from django.forms import ModelForm
 from ecommerce.models import Product
-from image_uploader_widget.widgets import ImageUploaderWidget
+from universal_uploader_widget.widgets import ImageUploaderWidget
 
 class ProductForm(ModelForm):
     class Meta:

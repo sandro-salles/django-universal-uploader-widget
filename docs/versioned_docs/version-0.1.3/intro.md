@@ -30,7 +30,7 @@ To get started, install this plugin with the pip package manager:
 pip install django-image-uploader-widget
 ```
 
-then, go to the `settings.py` file and add the `image_uploader_widget` to the installed apps:
+then, go to the `settings.py` file and add the `universal_uploader_widget` to the installed apps:
 
 ```python
 INSTALLED_APPS = [
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.forms',
-    'image_uploader_widget',
+    'universal_uploader_widget',
 ]
 ```
 
@@ -53,7 +53,7 @@ Now, you must be able to use the widget in your forms:
 ```python
 # forms.py
 from django import forms
-from image_uploader_widget.widgets import ImageUploaderWidget
+from universal_uploader_widget.widgets import ImageUploaderWidget
 
 class ExampleForm(forms.ModelForm):
     class Meta:
@@ -65,4 +65,4 @@ class ExampleForm(forms.ModelForm):
 
 ## Advanced Use Cases
 
-Better writed widget use cases and more effective examples is comming. Other examples with the inline is comming. For now, check the `image_uploader_widget_demo` folder in the Github [repository](https://github.com/inventare/django-image-uploader-widget).
+Better writed widget use cases and more effective examples is comming. Other examples with the inline is comming. For now, check the `universal_uploader_widget_demo` folder in the Github [repository](https://github.com/inventare/django-image-uploader-widget).

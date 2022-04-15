@@ -1,42 +1,42 @@
-.iuw-inline-root, .iuw-inline-root * {
+.uuw-inline-root, .uuw-inline-root * {
     box-sizing: border-box;
 }
 
-.iuw-inline-root {
+.uuw-inline-root {
     /* base widget */
     @include make-root();
 
     /* empty label */
-    .iuw-empty {
+    .uuw-empty {
         @include make-empty();
     }
     &:not(.non-empty) {
-        .iuw-empty {
+        .uuw-empty {
             height: 100%;
             opacity: 1;
         }
     }
     &.drop-zone {
-        .iuw-empty {
+        .uuw-empty {
             height: 0;
             opacity: 0;
         }
     }
 
     /* drop label */
-    .iuw-drop-label {
+    .uuw-drop-label {
         @include make-drop-label();
     }
     &.drop-zone {
-        .iuw-drop-label {
+        .uuw-drop-label {
             height: 100%;
             opacity: 1;
         }
     }
 
-    /* image preview */
+    /* file preview */
     .inline-related {
-        @include make-image-preview();
+        @include make-file-preview();
 
         &.empty-form {
             display: none;
@@ -46,7 +46,7 @@
         }
     }
 
-    /* images carousel */
+    /* files carousel */
     > div {
         height: 100%;
         width: auto;
@@ -55,7 +55,7 @@
     }
 
     /* add button */
-    .iuw-add-image-btn {
+    .uuw-add-file-btn {
         /* shape */
         border-radius: 5px;
         padding: 15px;
@@ -63,10 +63,10 @@
         max-width: 160px;
         
         /* styles */
-        border: 1px solid var(--iuw-image-preview-border);
-        box-shadow: 0 0 4px 0 var(--iuw-image-preview-shadow);
-        background: var(--iuw-add-image-background);
-        color: var(--iuw-add-image-color);
+        border: 1px solid var(--uuw-file-preview-border);
+        box-shadow: 0 0 4px 0 var(--uuw-file-preview-shadow);
+        background: var(--uuw-add-file-background);
+        color: var(--uuw-add-file-color);
         
         /* display */
         @include flex-column-center-center();
@@ -76,7 +76,7 @@
         cursor: pointer;
         
         svg {
-            fill: var(--iuw-add-image-color);
+            fill: var(--uuw-add-file-color);
             margin-bottom: 30px;
             width: 60px;
             height: auto;
@@ -99,7 +99,7 @@
     }
 
     &.non-empty {
-        .iuw-add-image-btn {
+        .uuw-add-file-btn {
             &:not(.visible-by-number) {
                 display: none;
             }
@@ -110,7 +110,7 @@
         }
     }
     &:not(.non-empty) {
-        .iuw-add-image-btn {
+        .uuw-add-file-btn {
             display: none;
         }
     }

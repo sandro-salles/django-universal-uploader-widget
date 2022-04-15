@@ -1,5 +1,5 @@
 from django.contrib import admin
-from image_uploader_widget.admin import ImageUploaderInline
+from universal_uploader_widget.admin import ImageUploaderInline
 
 from . import models
 from . import forms

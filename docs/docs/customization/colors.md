@@ -8,15 +8,15 @@ To customize the image uploader widget colors you can use your own css file to o
 
 ```scss
 body {
-    --iuw-background: #{$dashdark} !important;
-    --iuw-border-color: #{$dashborder} !important;
-    --iuw-color: #{$dashgray} !important;
-    --iuw-placeholder-text-color: #{$dashgray} !important;
-    --iuw-dropzone-background: #{$dashlight} !important;
-    --iuw-image-preview-border: #{$dashborder} !important;
-    --iuw-image-preview-shadow: rgba(0, 0, 0, 0.3);
-    --iuw-add-image-background: #{$dashlight} !important;
-    --iuw-add-image-color: #{$dashgray} !important;
+    --uuw-background: #{$dashdark} !important;
+    --uuw-border-color: #{$dashborder} !important;
+    --uuw-color: #{$dashgray} !important;
+    --uuw-placeholder-text-color: #{$dashgray} !important;
+    --uuw-dropzone-background: #{$dashlight} !important;
+    --uuw-image-preview-border: #{$dashborder} !important;
+    --uuw-image-preview-shadow: rgba(0, 0, 0, 0.3);
+    --uuw-add-image-background: #{$dashlight} !important;
+    --uuw-add-image-color: #{$dashgray} !important;
 }
 ```
 
