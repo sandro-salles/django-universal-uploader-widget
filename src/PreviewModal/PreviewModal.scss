@@ -1,13 +1,15 @@
 @import "../styles/mixins";
 @import "../styles/functions";
 
-@include cssvars((
-    modal-overlay: rgba(0, 0, 0, 0.6),
-    modal-file-background: #FFF,
-    modal-closebutton-background: #FFF,
-    modal-closebutton-shadow: rgba(0, 0, 0, 0.2), 
-    modal-closebutton-color: #333,
-));
+@include cssvars(
+    (
+        modal-overlay: rgba(0, 0, 0, 0.6),
+        modal-file-background: #fff,
+        modal-closebutton-background: #fff,
+        modal-closebutton-shadow: rgba(0, 0, 0, 0.2),
+        modal-closebutton-color: #333,
+    )
+);
 
 #uuw-modal-element {
     /* position */
@@ -47,6 +49,11 @@
 
         position: relative;
 
+        .uuw-modal-pdf-preview-item {
+            height: 100%;
+        }
+
+        video,
         img {
             background: var(--uuw-modal-file-background);
 
@@ -55,7 +62,7 @@
 
             object-fit: contain;
             object-position: center;
-            
+
             cursor: default;
         }
 
@@ -64,6 +71,7 @@
             right: 0;
             top: 0;
             transform: translate(50%, -50%);
+            z-index: 100;
 
             width: 40px;
             height: 40px;
@@ -72,7 +80,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            
+
             background: var(--uuw-modal-closebutton-background);
             filter: drop-shadow(0 0 5px var(--uuw-modal-closebutton-shadow));
 

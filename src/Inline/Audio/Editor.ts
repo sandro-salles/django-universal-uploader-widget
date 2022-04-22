@@ -1,29 +1,29 @@
 import {
     getInlineGroupOrThrow,
     parseFormSet,
-    ImageUploaderInlineFormSet,
-    ImageUploaderInlineManagementInputs,
+    UniversalUploaderInlineFormSet,
+    UniversalUploaderInlineManagementInputs,
     updateAllElementsIndexes,
     getManagementInputs,
     getAddButton,
     createTempFileInput,
-} from './Utils';
-import { EditorImage } from './EditorImage';
+} from '../Utils';
+import { EditorAudio } from './EditorAudio';
 
-export class ImageUploaderInline {
+export class AudioUploaderInline {
     element: HTMLElement;
     inlineGroup: HTMLElement;
-    addImageButton: HTMLElement;
+    addAudioButton: HTMLElement;
     tempFileInput: HTMLInputElement | null;
-    inlineFormset: ImageUploaderInlineFormSet;
-    management: ImageUploaderInlineManagementInputs;
+    inlineFormset: UniversalUploaderInlineFormSet;
+    management: UniversalUploaderInlineManagementInputs;
     next: number;
     maxCount: number;
-    images: EditorImage[];
+    audios: EditorAudio[];
     canPreview: boolean;
     
     constructor(element: HTMLElement) {
-        this.canPreview = true;
+        this.canPreview = false;
 
         this.tempFileInput = null;
         this.element = element;
@@ -36,17 +36,17 @@ export class ImageUploaderInline {
         } else {
             this.maxCount = parseInt(this.management.maxNumForms.value, 10);
         }
-        this.addImageButton = getAddButton(this.element);
+        this.addAudioButton = getAddButton(this.element);
         
         this.updateEmpty();
         this.updateAllIndexes();
 
-        this.images = Array
+        this.audios = Array
             .from(this.element.querySelectorAll<HTMLElement>('.inline-related'))
             .map((item) => {
-                const editorImage = new EditorImage(item, this.canPreview);
-                editorImage.onDelete = this.handleImageDelete;
-                return editorImage;
+                const editorAudio = new EditorAudio(item, this.canPreview);
+                editorAudio.onDelete = this.handleAudioDelete;
+                return editorAudio;
             });
 
         this.bindVariables();
@@ -60,13 +60,13 @@ export class ImageUploaderInline {
     }
 
     bindVariables() {
-        this.handleAddImage = this.handleAddImage.bind(this);
+        this.handleAddAudio = this.handleAddAudio.bind(this);
         this.handleTempFileInputChange = this.handleTempFileInputChange.bind(this);
     }
 
     bindEvents() {
-        this.addImageButton.addEventListener('click', this.handleAddImage);
-        this.element.querySelector('.uuw-empty')?.addEventListener('click', this.handleAddImage);
+        this.addAudioButton.addEventListener('click', this.handleAddAudio);
+        this.element.querySelector('.uuw-empty')?.addEventListener('click', this.handleAddAudio);
     }
 
     updateEmpty() {
@@ -85,7 +85,7 @@ export class ImageUploaderInline {
         
         this.next = count;
         this.management.totalForms.value = String(this.next);
-        this.addImageButton.classList.toggle('visible-by-number', this.maxCount - this.next > 0);
+        this.addAudioButton.classList.toggle('visible-by-number', this.maxCount - this.next > 0);
     }
 
     createFromEmptyTemplate(): HTMLElement {
@@ -140,9 +140,9 @@ export class ImageUploaderInline {
             this.tempFileInput = null;
         }
 
-        const editorImage = new EditorImage(row, true, URL.createObjectURL(file));
-        editorImage.onDelete = this.handleImageDelete;
-        this.images.push(editorImage);
+        const editorAudio = new EditorAudio(row, true, URL.createObjectURL(file));
+        editorAudio.onDelete = this.handleAudioDelete;
+        this.audios.push(editorAudio);
         this.updateEmpty();
         this.updateAllIndexes();
     }
@@ -155,16 +155,16 @@ export class ImageUploaderInline {
         this.addFile();
     }
 
-    handleAddImage() {
+    handleAddAudio() {
         if(!this.tempFileInput) {
-            this.tempFileInput = createTempFileInput();
+            this.tempFileInput = createTempFileInput('audio/*');
             this.tempFileInput.addEventListener('change', this.handleTempFileInputChange);
             this.element.appendChild(this.tempFileInput);
         }
         this.tempFileInput.click();
     }
 
-    handleImageDelete = (image: EditorImage) => {
+    handleAudioDelete = (image: EditorAudio) => {
         if (image.element.getAttribute('data-raw')) {
             image.element.classList.add('deleted');
             const checkboxInput = image.element.querySelector('input[type=checkbox]') as HTMLInputElement;
@@ -172,7 +172,7 @@ export class ImageUploaderInline {
         } else {
             image.element.parentElement?.removeChild(image.element);
         }
-        this.images = this.images.filter((item) => item !== image);
+        this.audios = this.audios.filter((item) => item !== image);
         this.updateEmpty();
     }
 

@@ -1,5 +1,5 @@
 import { PreviewModal } from "../../PreviewModal";
-import { renderPreview } from "../../Preview";
+import { renderMediaPreview } from "../../Preview";
 
 export class ImageUploaderWidget {
   element: HTMLElement;
@@ -66,20 +66,20 @@ export class ImageUploaderWidget {
   renderWidget() {
     this.updateCheckBoxAndEmptyState();
 
-    Array.from(this.element.querySelectorAll(".uuw-image-preview")).forEach(
+    Array.from(this.element.querySelectorAll(".uuw-file-preview")).forEach(
       (item) => this.element.removeChild(item)
     );
     if (this.file) {
       const url = URL.createObjectURL(this.file);
       this.element.appendChild(
-        renderPreview(url, this.canDelete, this.canPreview)
+        renderMediaPreview(url, this.canDelete, this.canPreview, "img")
       );
     } else if (this.raw) {
       this.element.appendChild(
-        renderPreview(this.raw, this.canDelete, this.canPreview)
+        renderMediaPreview(this.raw, this.canDelete, this.canPreview, "img")
       );
     }
-    Array.from(this.element.querySelectorAll(".uuw-image-preview")).forEach(
+    Array.from(this.element.querySelectorAll(".uuw-file-preview")).forEach(
       (item) => item.addEventListener("click", this.onImagePreviewClick)
     );
   }
@@ -155,10 +155,10 @@ export class ImageUploaderWidget {
     if (e && e.target) {
       const targetElement = e.target as HTMLElement;
       if (targetElement.closest(".uuw-delete-icon")) {
-        const element = targetElement.closest(".uuw-image-preview");
+        const element = targetElement.closest(".uuw-file-preview");
         return this.performDeleteImage(element);
       } else if (targetElement.closest(".uuw-preview-icon")) {
-        const element = targetElement.closest(".uuw-image-preview");
+        const element = targetElement.closest(".uuw-file-preview");
         return this.performPreviewImage(element);
       }
     }

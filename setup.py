@@ -8,7 +8,7 @@ f.close()
 
 setup(
     name='django-universal-uploader-widget',
-    version='0.1.6',
+    version='0.2.0',
     description='Simple Universal Uploader Widget for Django-Admin',
     long_description=readme,
     long_description_content_type='text/markdown',

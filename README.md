@@ -1,12 +1,12 @@
-# django-image-uploader-widget
+# django-universal-uploader-widget
 
 A beautiful image uploader widget for django/django-admin.
 
-![Beautiful image uploader widget](https://raw.githubusercontent.com/inventare/django-image-uploader-widget/main/docs/static/img/beautiful.gif)
+![Beautiful image uploader widget](https://raw.githubusercontent.com/inventare/django-universal-uploader-widget/main/docs/static/img/beautiful.gif)
 
-![Multiple behaviours](https://raw.githubusercontent.com/inventare/django-image-uploader-widget/main/docs/static/img/click.gif)
+![Multiple behaviours](https://raw.githubusercontent.com/inventare/django-universal-uploader-widget/main/docs/static/img/click.gif)
 
-![Multiple files handling](https://raw.githubusercontent.com/inventare/django-image-uploader-widget/main/docs/static/img/inline_multiple.gif)
+![Multiple files handling](https://raw.githubusercontent.com/inventare/django-universal-uploader-widget/main/docs/static/img/inline_multiple.gif)
 
 ## Documentation
 
@@ -17,7 +17,7 @@ To understand this package and how to use it you can access the package [documen
 Install via pip package manager:
 
 ```bash
-pip install django-image-uploader-widget
+pip install django-universal-uploader-widget
 ```
 
 Add to installed apps, in `settings.py`:

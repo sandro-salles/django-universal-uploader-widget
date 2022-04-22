@@ -6,6 +6,11 @@
   version "0.5.6"
   resolved "https://registry.npmjs.org/@discoveryjs/json-ext/-/json-ext-0.5.6.tgz"
 
+"@medv/finder@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@medv/finder/-/finder-2.1.0.tgz#5c53cdaac3b87057b9e5579ca1282b2397624016"
+  integrity sha512-Egrg5XO4kLol24b1Kv50HDfi5hW0yQ6aWSsO0Hea1eJ4rogKElIN0M86FdVnGF4XIGYyA7QWx0MgbOzVPA0qkA==
+
 "@types/eslint-scope@^3.7.3":
   version "3.7.3"
   resolved "https://registry.npmjs.org/@types/eslint-scope/-/eslint-scope-3.7.3.tgz"
@@ -306,6 +311,11 @@ cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+crypto-es@^1.2.7:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/crypto-es/-/crypto-es-1.2.7.tgz#754a6d52319a94fb4eb1f119297f17196b360f88"
+  integrity sha512-UUqiVJ2gUuZFmbFsKmud3uuLcNP2+Opt+5ysmljycFCyhA0+T16XJmo1ev/t5kMChMqWh7IEvURNCqsg+SjZGQ==
+
 css-loader@^6.6.0:
   version "6.6.0"
   resolved "https://registry.npmjs.org/css-loader/-/css-loader-6.6.0.tgz"
@@ -561,6 +571,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+mathador@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/mathador/-/mathador-0.2.2.tgz#8f22d787a4d4c7018a8572dec587a23f3c22d96c"
+  integrity sha512-Xxm9uYQ7P1/EsCKwbH+QFlKpfDUg7qPy1VU/CtFWJaTFOdP0vqH8QPx/DcmKRHWdSSVwOVIwod+cU57wf6Rkng==
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz"
@@ -636,6 +651,11 @@ p-try@^2.0.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz"
 
+pako@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/pako/-/pako-2.0.4.tgz#6cebc4bbb0b6c73b0d5b8d7e8476e2b2fbea576d"
+  integrity sha512-v8tweI900AUkZN6heMU/4Uy4cXRc2AYNRggVmTR+dEncawDJgCdLMximOVA2p4qO57WMynangsfGRb5WD6L1Bg==
+
 path-exists@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz"
@@ -647,6 +667,13 @@ path-key@^3.0.0, path-key@^3.1.0:
 path-parse@^1.0.7:
   version "1.0.7"
   resolved "https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz"
+
+pdfjs-dist@^2.9.359:
+  version "2.13.216"
+  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-2.13.216.tgz#251a11c9c8c6db19baacd833a4e6986c517d1ab3"
+  integrity sha512-qn/9a/3IHIKZarTK6ajeeFXBkG15Lg1Fx99PxU09PAU2i874X8mTcHJYyDJxu7WDfNhV6hM7bRQBZU384anoqQ==
+  dependencies:
+    web-streams-polyfill "^3.2.0"
 
 picocolors@^1.0.0:
   version "1.0.0"
@@ -901,6 +928,25 @@ ts-loader@^9.2.6:
     micromatch "^4.0.0"
     semver "^7.3.4"
 
+ts-pdf@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/ts-pdf/-/ts-pdf-0.11.1.tgz#e2775c4df2fe9f6101e6335f6e938373d80b76d8"
+  integrity sha512-vIpUtr41KCOureBUGXq3HoD9nZuc5HYxN3qRJQJ/aY03uBW4PkT+lrBUStsmYmo2sGyyuTbnNSzzf+JKgLJUbg==
+  dependencies:
+    crypto-es "^1.2.7"
+    mathador "^0.2.2"
+    pako "^2.0.4"
+    pdfjs-dist "^2.9.359"
+    ts-viewers-core "^0.0.25"
+
+ts-viewers-core@^0.0.25:
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/ts-viewers-core/-/ts-viewers-core-0.0.25.tgz#a5f86948d88af31d0286960b2ea09be291ab3d25"
+  integrity sha512-52s+Em46Sgk5vWJFPNTczjpH6jy+s6LOTLp534qOwPZpEkd8FnERcDxRQ7gWTop5bZXF3QrH5yzbK6g1eUqA1g==
+  dependencies:
+    mathador "^0.2.2"
+    uuid "^8.3.2"
+
 typescript@^4.5.5:
   version "4.5.5"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.5.5.tgz"
@@ -915,12 +961,22 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
 
+uuid@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
 watchpack@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npmjs.org/watchpack/-/watchpack-2.3.1.tgz"
   dependencies:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
+
+web-streams-polyfill@^3.2.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
+  integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
 
 webpack-cli@^4.9.2:
   version "4.9.2"

@@ -7,7 +7,7 @@ sidebar_position: 2
 If you want to read a more complete description of how to use this widget, see the [Tutorial](./tutorial.md). But, if you is an advanced user, only install the package:
 
 ```bash
-pip install django-image-uploader-widget
+pip install django-universal-uploader-widget
 ```
 
 and add the `universal_uploader_widget` to the `INSTALLED_APPS` in the `settings.py`:

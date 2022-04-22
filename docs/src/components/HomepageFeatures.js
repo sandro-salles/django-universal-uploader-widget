@@ -8,7 +8,7 @@ const FeatureList = [
     image: require('../../static/img/beautiful.gif').default,
     description: (
       <>
-        The <strong>django-image-uploader-widget</strong> is a beautiful widget for handling 
+        The <strong>django-universal-uploader-widget</strong> is a beautiful widget for handling 
         image uploads in django forms, specially in django-admin.
       </>
     ),
@@ -18,7 +18,7 @@ const FeatureList = [
     image: require('../../static/img/inline_multiple.gif').default,
     description: (
       <>
-        The <strong>django-image-uploader-widget</strong> includes an inline editor
+        The <strong>django-universal-uploader-widget</strong> includes an inline editor
         to handle multiple images uploading.
       </>
     ),
@@ -28,7 +28,7 @@ const FeatureList = [
     image: require('../../static/img/click.gif').default,
     description: (
       <>
-        The <strong>django-image-uploader-widget</strong> includes both behaviours
+        The <strong>django-universal-uploader-widget</strong> includes both behaviours
         support: <strong>click to select image</strong> or <strong>drag and drop image</strong>.
       </>
     ),

@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'django-image-uploader-widget',
+  title: 'django-universal-uploader-widget',
   tagline: 'A beautiful image uploader widget for django/django-admin',
   url: 'https://uuw.institutoinventare.com.br/',
   baseUrl: '/',
@@ -15,7 +15,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'inventare', // Usually your GitHub org/user name.
-  projectName: 'django-image-uploader-widget', // Usually your repo name.
+  projectName: 'django-universal-uploader-widget', // Usually your repo name.
   presets: [
     [
       'classic',
@@ -26,11 +26,11 @@ const config = {
         },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/inventare/django-image-uploader-widget/blob/main/docs/',
+          editUrl: 'https://github.com/sandro-salles/django-universal-uploader-widget/blob/main/docs/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/inventare/django-image-uploader-widget/blob/main/docs/',
+          editUrl: 'https://github.com/sandro-salles/django-universal-uploader-widget/blob/main/docs/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -43,9 +43,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'image-uploader-widget',
+        title: 'universal-uploader-widget',
         logo: {
-          alt: 'image-uploader-widget',
+          alt: 'universal-uploader-widget',
           src: 'img/logo.svg',
         },
         items: [
@@ -55,7 +55,7 @@ const config = {
             position: 'right',
             dropdownActiveClassDisabled: true,
           },
-          { href: 'https://github.com/inventare/django-image-uploader-widget', label: 'GitHub', position: 'right', },
+          { href: 'https://github.com/sandro-salles/django-universal-uploader-widget', label: 'GitHub', position: 'right', },
         ],
       },
       footer: {
@@ -88,7 +88,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/inventare/django-image-uploader-widget',
+                href: 'https://github.com/sandro-salles/django-universal-uploader-widget',
               },
             ],
           },

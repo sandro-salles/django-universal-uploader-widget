@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Colors
 
-To customize the image uploader widget colors you can use your own css file to override the css variables defined by the `image-uploader-inline.css`, `image-uploader-inline.min.css`, `image-uploader-widget.css` and `image-uploader-widget.min.css`. See an example, taken from another personal private project:
+To customize the image uploader widget colors you can use your own css file to override the css variables defined by the `universal-uploader-inline.css`, `universal-uploader-inline.min.css`, `universal-uploader-widget.css` and `universal-uploader-widget.min.css`. See an example, taken from another personal private project:
 
 ```scss
 body {
@@ -20,4 +20,4 @@ body {
 }
 ```
 
-**Observation**: To see better the variables name, check the scss file at the GitHub repository: [here](https://github.com/inventare/django-image-uploader-widget/blob/main/src/styles/_variables.scss).
+**Observation**: To see better the variables name, check the scss file at the GitHub repository: [here](https://github.com/sandro-salles/django-universal-uploader-widget/blob/main/src/styles/_variables.scss).

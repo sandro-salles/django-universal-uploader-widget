@@ -1,5 +1,5 @@
 import { PreviewModal } from "../../PreviewModal";
-import { renderPreview } from "../../Preview";
+import { renderPdfPreview } from "../../Preview";
 
 export class PdfUploaderWidget {
   element: HTMLElement;
@@ -63,23 +63,30 @@ export class PdfUploaderWidget {
     }
   }
 
-  renderWidget() {
+  async renderWidget() {
     this.updateCheckBoxAndEmptyState();
 
-    Array.from(this.element.querySelectorAll(".uuw-pdf-preview")).forEach(
+    Array.from(this.element.querySelectorAll(".uuw-file-preview")).forEach(
       (item) => this.element.removeChild(item)
     );
     if (this.file) {
       const url = URL.createObjectURL(this.file);
-      this.element.appendChild(
-        renderPreview(url, this.canDelete, this.canPreview)
+
+      await renderPdfPreview(
+        this.element,
+        url,
+        this.canDelete,
+        this.canPreview
       );
     } else if (this.raw) {
-      this.element.appendChild(
-        renderPreview(this.raw, this.canDelete, this.canPreview)
+      await renderPdfPreview(
+        this.element,
+        this.raw,
+        this.canDelete,
+        this.canPreview
       );
     }
-    Array.from(this.element.querySelectorAll(".uuw-pdf-preview")).forEach(
+    Array.from(this.element.querySelectorAll(".uuw-file-preview")).forEach(
       (item) => item.addEventListener("click", this.onPdfPreviewClick)
     );
   }
@@ -96,10 +103,10 @@ export class PdfUploaderWidget {
   };
 
   performPreviewPdf = (previewElement?: Element | null) => {
-    let Pdf = previewElement?.querySelector("canvas");
-    if (Pdf) {
-      Pdf = Pdf.cloneNode(true) as HTMLCanvasElement;
-      PreviewModal.createPreviewModal(Pdf);
+    let Pdf = previewElement?.querySelector(".uuw-file-preview-container");
+    const url = this.file ? URL.createObjectURL(this.file) : this.raw;
+    if (Pdf && url) {
+      PreviewModal.createPdfPreviewModal(url);
       PreviewModal.openPreviewModal();
     }
   };
@@ -155,10 +162,10 @@ export class PdfUploaderWidget {
     if (e && e.target) {
       const targetElement = e.target as HTMLElement;
       if (targetElement.closest(".uuw-delete-icon")) {
-        const element = targetElement.closest(".uuw-pdf-preview");
+        const element = targetElement.closest(".uuw-file-preview");
         return this.performDeletePdf(element);
       } else if (targetElement.closest(".uuw-preview-icon")) {
-        const element = targetElement.closest(".uuw-pdf-preview");
+        const element = targetElement.closest(".uuw-file-preview");
         return this.performPreviewPdf(element);
       }
     }

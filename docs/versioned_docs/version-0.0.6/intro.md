@@ -23,7 +23,7 @@ One of the things that i did't like in the **django-admin** is the arcaic appear
 ### 1. Install using the pip:
 
 ```
-pip install django-image-uploader-widget
+pip install django-universal-uploader-widget
 ```
 
 ### 2. Add this to the INSTALLED_APPS:

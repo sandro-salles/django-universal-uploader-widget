@@ -71,7 +71,7 @@ And, now, we have a new, and more complex, folder structure:
 To install the widget, is possible to use the same instructions of the [Introduction](../intro.md), and the first step is to install the package with pip:
 
 ```bash
-pip install django-image-uploader-widget
+pip install django-universal-uploader-widget
 ```
 
 then, add it to the `INSTALLED_APPS` on the `settings.py`, in the case of this example: `core/settings.py` file. To understand better the Applications, see the django documentation: [Applications](https://docs.djangoproject.com/en/3.2/ref/applications/).

@@ -1,4 +1,5 @@
-.uuw-root, .uuw-root * {
+.uuw-root,
+.uuw-root * {
     box-sizing: border-box;
 }
 
@@ -37,5 +38,40 @@
     /* file preview */
     .uuw-file-preview {
         @include make-file-preview();
+    }
+
+    &.uuw-pdf {
+        .uuw-file-preview {
+            width: 374px;
+        }
+    }
+
+    &.uuw-audio {
+        height: 85px;
+        .uuw-file-preview {
+            width: 374px;
+            text-align: center;
+            padding-top: 7px;
+        }
+
+        .uuw-empty {
+            padding: 13px 0;
+
+            svg {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    &.uuw-video {
+        height: 240px;
+        .uuw-file-preview {
+            width: 356px;
+            background-color: #000;
+            display: flex;
+            video {
+                width: 100%;
+            }
+        }
     }
 }

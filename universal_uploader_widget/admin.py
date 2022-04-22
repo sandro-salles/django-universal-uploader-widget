@@ -2,7 +2,7 @@ from django import forms
 from django.contrib import admin
 from django.conf import settings
 
-class ImageUploaderInline(admin.StackedInline):
+class UniversalUploaderInline(admin.StackedInline):
     template = 'admin/edit_inline/universal_uploader.html'
     extra = 0
 
@@ -19,3 +19,4 @@ class ImageUploaderInline(admin.StackedInline):
                 ]
             }
         )
+

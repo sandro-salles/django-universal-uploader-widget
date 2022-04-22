@@ -1,5 +1,7 @@
 import { ImageUploaderWidget } from "./Widget/ImageUploaderWidget";
 import { PdfUploaderWidget } from "./Widget/PdfUploaderWidget";
+import { AudioUploaderWidget } from "./Widget/AudioUploaderWidget";
+import { VideoUploaderWidget } from "./Widget/VideoUploaderWidget";
 
 declare global {
   interface Window {
@@ -16,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return new ImageUploaderWidget(element);
       } else if (element.classList.contains("uuw-pdf")) {
         return new PdfUploaderWidget(element);
+      } else if (element.classList.contains("uuw-audio")) {
+        return new AudioUploaderWidget(element);
+      } else if (element.classList.contains("uuw-video")) {
+        return new VideoUploaderWidget(element);
       }
     }
   );
@@ -33,6 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return new ImageUploaderWidget(element);
           } else if (element.classList.contains("uuw-pdf")) {
             return new PdfUploaderWidget(element);
+          } else if (element.classList.contains("uuw-audio")) {
+            return new AudioUploaderWidget(element);
+          } else if (element.classList.contains("uuw-video")) {
+            return new VideoUploaderWidget(element);
           }
         }
       );

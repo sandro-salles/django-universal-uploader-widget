@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Introduction
 
-The **django-image-uploader-widget** is a widget to **django**, specially **django-admin** to handle better image uploads with a modern and beautiful user interface.
+The **django-universal-uploader-widget** is a widget to **django**, specially **django-admin** to handle better image uploads with a modern and beautiful user interface.
 
 ## Features
 
@@ -27,7 +27,7 @@ Some of the features of this widget is:
 To get started, install this plugin with the pip package manager:
 
 ```sh
-pip install django-image-uploader-widget
+pip install django-universal-uploader-widget
 ```
 
 then, go to the `settings.py` file and add the `universal_uploader_widget` to the installed apps:
@@ -65,4 +65,4 @@ class ExampleForm(forms.ModelForm):
 
 ## Advanced Use Cases
 
-Better writed widget use cases and more effective examples is comming. Other examples with the inline is comming. For now, check the `universal_uploader_widget_demo` folder in the Github [repository](https://github.com/inventare/django-image-uploader-widget).
+Better writed widget use cases and more effective examples is comming. Other examples with the inline is comming. For now, check the `universal_uploader_widget_demo` folder in the Github [repository](https://github.com/sandro-salles/django-universal-uploader-widget).

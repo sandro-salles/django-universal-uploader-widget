@@ -1,6 +1,6 @@
 {
   "name": "django-universal-uploader-widget",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "main": "index.js",
   "repository": "https://github.com/sandro-salles/django-universal-uploader-widget",
   "author": "Sandro Salles <sandro@snippet.com.br>",
@@ -19,5 +19,9 @@
     "typescript": "^4.5.5",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "@medv/finder": "^2.1.0",
+    "ts-pdf": "^0.11.1"
   }
 }

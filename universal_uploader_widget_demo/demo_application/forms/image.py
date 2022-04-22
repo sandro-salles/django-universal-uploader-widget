@@ -2,6 +2,7 @@ from django import forms
 
 from universal_uploader_widget.widgets import ImageUploaderWidget
 
+
 class ExampleForm(forms.ModelForm):
 
     class Meta:
@@ -11,6 +12,7 @@ class ExampleForm(forms.ModelForm):
             'image3': ImageUploaderWidget(),
         }
         fields = '__all__'
+
 
 class ExampleInlineForm(forms.ModelForm):
 
