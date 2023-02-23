@@ -30,7 +30,7 @@ class ImageUploaderWidget(UniversalUploaderWidget):
             name, value, attrs)
         context['widget'].update({
             'file_type': 'image',
-            'input_accept': '.jpg,.jpeg,.png'
+            'input_accept': '.jpg,.jpeg,.png,.gif,.webp'
         })
         return context
 
