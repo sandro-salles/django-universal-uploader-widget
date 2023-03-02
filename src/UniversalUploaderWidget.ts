@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const $ = window.django.jQuery;
 
     $(document).on("formset:added", (_: Event, row: HTMLElement[]) => {
-      if (!row || !row.length) {
+      if (!row || !row.length || row.length <= 0) {
         return;
       }
       Array.from(row[0].querySelectorAll<HTMLElement>(".uuw-root")).map(

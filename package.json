@@ -1,6 +1,6 @@
 {
   "name": "django-universal-uploader-widget",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "main": "index.js",
   "repository": "https://github.com/sandro-salles/django-universal-uploader-widget",
   "author": "Sandro Salles <sandro@snippet.com.br>",
